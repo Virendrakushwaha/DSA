@@ -103,7 +103,7 @@ class Exact extends Split{
 
     public Exact(User user,Double amount){
         super(user);
-        this.amount = amount;
+     //   this.amount = amount;
     }
 }
 
@@ -111,7 +111,7 @@ class Percent extends Split{
 
     public Percent(User user,Double amt){
         super(user);
-        this.amt = amt;
+       // this.amt = amt;
     }
 
 
