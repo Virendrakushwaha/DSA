@@ -9,9 +9,9 @@ public class SubarraySumK {
         int sum=0,count=0;
         for(int i=0;i<nums.length;i++){
             sum+=nums[i];
-            if(freqMap.containsKey(sum-k))
+            if(freqMap.containsKey(sum-k))       //checking sum-k(jo ab dekh dekh chuke) is present in map
                 count+=freqMap.get(sum-k);
-                freqMap.put(sum, freqMap.getOrDefault(sum-k,0)+1);
+                freqMap.put(sum, freqMap.getOrDefault(sum-k,0)+1);   //in case s-k is there in map(matlab pehle dekh chuke ) then uska count+1. agar nhi dekhke not in map then add in map & count+1
 
         }
         return count;
