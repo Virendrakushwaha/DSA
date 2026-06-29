@@ -10,36 +10,26 @@ public class LonelyNumber {
         ArrayList<Integer> res = new ArrayList<>();
         for(int i=0;i<nums.length;i++){
             if(map.containsKey(nums[i]) && map.get(nums[i])==1){
-                if(i==0 && !checkRightAdjacent(nums[i],map))
+                if(i==0 && checkLonely(nums[i],map))
                     res.add(nums[i]);
-                else if(i==nums.length-1 && !checkLeftAdjacent(nums[i],map))
+                else if(i==nums.length-1 && checkLonely(nums[i],map))
                     res.add(nums[i]);
 
-                else if ((i!=0 && i!=nums.length-1) && !checkAdjacent(nums[i], map))
+                else if ((i!=0 && i!=nums.length-1) && checkLonely(nums[i], map))
                     res.add(nums[i]);
 
             }
         }
         return res;
     }
-    static boolean checkAdjacent(int x, HashMap<Integer,Integer> map){
+    static boolean checkLonely(int x, HashMap<Integer,Integer> map){
         if(map.containsKey(x-1) || map.containsKey(x+1))
-            return true;
+            return false;
 
-        return false;
+        return true;
     }
 
-    static boolean checkRightAdjacent(int x, HashMap<Integer,Integer> map){
-        if(map.containsKey(x+1))
-            return true;
-
-        return false;
-    }
-
-    static boolean checkLeftAdjacent(int x, HashMap<Integer,Integer> map){
-        if(map.containsKey(x-1))
-            return true;
-
-        return false;
+    static void main() {
+        System.out.println(findLonely(new int[]{62,35,59,55,84,61,38,87,55,82}));
     }
 }
