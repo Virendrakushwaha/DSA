@@ -30,6 +30,6 @@ public class AnniversaryFilterDemo {
         //find employees whose work anniversary falls on a given month/day, ignoring the
         //year.
 
-        staff.stream().filter(s->s.dateOfJoining.getDayOfMonth()==10 && s.dateOfJoining.getMonth()==3).map(e->e.fullName).collect(Collectors.toList());
+      //  staff.stream().filter(s->s.dateOfJoining.getDayOfMonth()==10 && s.dateOfJoining.getMonth()==3).map(e->e.fullName).collect(Collectors.toList());
     }
 }
