@@ -1,4 +1,4 @@
-package DesignPattern;
+package DesignPattern.CreationalDesignPattern;
 
 class Singleton {
     private static volatile Singleton obj;

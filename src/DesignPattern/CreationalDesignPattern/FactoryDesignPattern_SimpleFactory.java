@@ -1,4 +1,4 @@
-package DesignPattern;
+package DesignPattern.CreationalDesignPattern;
 
 interface Notification{
     void sendNotification(String msg);
